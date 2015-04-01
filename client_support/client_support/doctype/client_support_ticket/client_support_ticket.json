@@ -34,7 +34,8 @@
    "label": "Project", 
    "options": "Project Name", 
    "permlevel": 0, 
-   "precision": ""
+   "precision": "", 
+   "reqd": 1
   }, 
   {
    "fieldname": "column_break_3", 
@@ -114,7 +115,7 @@
  "is_submittable": 1, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-01 11:03:21.784525", 
+ "modified": "2015-04-01 15:24:28.329806", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 

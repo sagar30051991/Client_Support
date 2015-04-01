@@ -6,6 +6,6 @@ def get_data():
 			"color": "grey",
 			"icon": "icon-phone",
 			"type": "module",
-			"label": _("client_support")
+			"label": _("Client Support")
 		}
 	}
