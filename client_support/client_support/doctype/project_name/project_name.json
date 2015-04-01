@@ -36,7 +36,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-03-31 14:44:16.150227", 
+ "modified": "2015-03-31 18:18:17.330626", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Project Name", 
@@ -45,7 +45,7 @@
  "permissions": [
   {
    "amend": 0, 
-   "apply_user_permissions": 0, 
+   "apply_user_permissions": 1, 
    "cancel": 0, 
    "create": 0, 
    "delete": 0, 
@@ -63,7 +63,7 @@
   }, 
   {
    "amend": 0, 
-   "apply_user_permissions": 0, 
+   "apply_user_permissions": 1, 
    "cancel": 0, 
    "create": 1, 
    "delete": 0, 

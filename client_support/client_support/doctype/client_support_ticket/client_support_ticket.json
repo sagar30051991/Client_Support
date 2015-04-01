@@ -2,7 +2,7 @@
  "allow_copy": 0, 
  "allow_import": 0, 
  "allow_rename": 0, 
- "autoname": "field:issue", 
+ "autoname": "naming_series:", 
  "creation": "2015-03-31 12:50:49.446272", 
  "custom": 0, 
  "docstatus": 0, 
@@ -53,17 +53,11 @@
   {
    "default": "", 
    "fieldname": "opening_date", 
-   "fieldtype": "Date", 
+   "fieldtype": "Datetime", 
    "label": "Opening Date", 
    "permlevel": 0, 
-   "precision": ""
-  }, 
-  {
-   "fieldname": "closing_date", 
-   "fieldtype": "Date", 
-   "label": "Closing Date", 
-   "permlevel": 0, 
-   "precision": ""
+   "precision": "", 
+   "read_only": 1
   }, 
   {
    "fieldname": "issue_details", 
@@ -79,6 +73,28 @@
    "permlevel": 0, 
    "precision": "", 
    "reqd": 1
+  }, 
+  {
+   "fieldname": "resolution", 
+   "fieldtype": "Section Break", 
+   "label": "Resolution", 
+   "permlevel": 0, 
+   "precision": ""
+  }, 
+  {
+   "fieldname": "closing_date", 
+   "fieldtype": "Datetime", 
+   "label": "Closing Date", 
+   "permlevel": 0, 
+   "precision": "", 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "resolution_details", 
+   "fieldtype": "Text", 
+   "label": "Resolution Details", 
+   "permlevel": 0, 
+   "precision": ""
   }, 
   {
    "fieldname": "amended_from", 
@@ -98,7 +114,7 @@
  "is_submittable": 1, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-03-31 16:10:58.645370", 
+ "modified": "2015-04-01 11:03:21.784525", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 
@@ -114,10 +130,11 @@
    "write": 1
   }, 
   {
+   "apply_user_permissions": 1, 
    "permlevel": 0, 
    "read": 1, 
    "role": "Support User", 
-   "submit": 1, 
+   "submit": 0, 
    "write": 1
   }
  ], 
