@@ -29,13 +29,13 @@ class ClientSupportTicket(Document):
 	
 		if self.status == "Open":
 			# if status is open then set opening date
-			# check if opening_date is already set if not then set the value
+			# check if start_date is already set if not then set the value
 
-			odt = frappe.db.get_value("Client Support Ticket","opening_date","opening_date")
+			odt = frappe.db.get_value("Client Support Ticket","start_date","start_date")
 			if not odt:
-				self.opening_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
+				self.start_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
 			else:
-				self.opening_date = odt 
+				self.start_date = odt 
 
 		elif self.status == "Close":
 			self.closing_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
