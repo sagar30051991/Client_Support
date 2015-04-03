@@ -15,7 +15,7 @@ cur_frm.cscript.onload = function(){
 			refresh_field("status")
 		}
 	}		
-	else{
+	else{		
 		this.frm.set_df_property("resolution_details","read_only",1);
 		
 		setTimeout(function(){
@@ -26,6 +26,10 @@ cur_frm.cscript.onload = function(){
 		if (this.frm.doc.status == "Open"){
 			this.frm.doc.closing_date = "";
 			this.frm.set_df_property("resolution","hidden",1);
+		}
+		else{
+			this.frm.set_df_property("project","read_only",1);
+			this.frm.set_df_property("request_type","read_only",1);
 		}
 	}
 }
@@ -45,7 +49,6 @@ cur_frm.cscript.status = function(){
 		else if(this.frm.doc.status == "Open"){
 			alert("Support user can not change the status to Open");
 			this.frm.doc.status = status
-			console.log(status)
 			refresh_field('status')
 			this.frm.doc.resolution_details.focus();
 		}
@@ -53,7 +56,6 @@ cur_frm.cscript.status = function(){
 			this.frm.set_df_property("resolution_details","reqd", 0);
 	}
 	else{
-		console.log("client")
 		console.log(status)
 		if(this.frm.doc.status == "In Progress" || this.frm.doc.status == "Not a Issue" || this.frm.doc.status == "Completed"){
 			alert("Sorry, You can't change status to "+this.frm.doc.status);
@@ -62,6 +64,11 @@ cur_frm.cscript.status = function(){
 		}
 	}
 }
+
+/*// Trigger on Request Type Field
+cur_frm.cscript.request_type = function(){
+
+}*/
 
 isSupportUser = function(){
 	// return true if user role Client

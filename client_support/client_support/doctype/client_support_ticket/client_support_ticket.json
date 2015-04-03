@@ -6,7 +6,7 @@
  "creation": "2015-03-31 12:50:49.446272", 
  "custom": 0, 
  "docstatus": 0, 
- "doctype": "Report", 
+ "doctype": "DocType", 
  "document_type": "Master", 
  "fields": [
   {
@@ -31,7 +31,7 @@
    "fieldtype": "Select", 
    "in_list_view": 1, 
    "label": "Request Type", 
-   "options": "Issue\nFeature\nSupport\nTraining\nDocumentation\nUI/Design\nFunctionality Review\n", 
+   "options": "Issue\nFeature\nSupport\nTraining\nDocumentation\nUI/Design\nFunctionality Review", 
    "permlevel": 0, 
    "precision": ""
   }, 
@@ -123,7 +123,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-02 15:33:10.228376", 
+ "modified": "2015-04-03 14:59:32.379771", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 

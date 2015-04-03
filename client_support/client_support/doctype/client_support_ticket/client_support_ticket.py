@@ -19,8 +19,6 @@ class ClientSupportTicket(Document):
 		self.name = make_autoname(project_name + ".####")
 
 	def validate(self):
-		frappe.errprint("validate")
-		
 		if not self.project:
 			msgprint("Please select the project")
 
