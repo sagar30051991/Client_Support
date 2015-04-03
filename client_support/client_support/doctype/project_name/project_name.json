@@ -27,6 +27,34 @@
    "reqd": 1, 
    "search_index": 0, 
    "set_only_once": 0
+  }, 
+  {
+   "fieldname": "stakeholder", 
+   "fieldtype": "Data", 
+   "label": "Stakeholder", 
+   "permlevel": 0, 
+   "precision": ""
+  }, 
+  {
+   "fieldname": "column_break_3", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0, 
+   "precision": ""
+  }, 
+  {
+   "fieldname": "start_date", 
+   "fieldtype": "Date", 
+   "label": "Start Date", 
+   "permlevel": 0, 
+   "precision": "", 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "close_date", 
+   "fieldtype": "Date", 
+   "label": "Close Date", 
+   "permlevel": 0, 
+   "precision": ""
   }
  ], 
  "hide_heading": 0, 
@@ -36,7 +64,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-03-31 18:18:17.330626", 
+ "modified": "2015-04-03 14:42:28.076475", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Project Name", 
@@ -65,7 +93,7 @@
    "amend": 0, 
    "apply_user_permissions": 1, 
    "cancel": 0, 
-   "create": 1, 
+   "create": 0, 
    "delete": 0, 
    "email": 0, 
    "export": 0, 
@@ -77,6 +105,15 @@
    "role": "Support User", 
    "set_user_permissions": 0, 
    "submit": 0, 
+   "write": 0
+  }, 
+  {
+   "apply_user_permissions": 1, 
+   "create": 1, 
+   "delete": 1, 
+   "permlevel": 0, 
+   "read": 1, 
+   "role": "Support Manager", 
    "write": 1
   }
  ], 
