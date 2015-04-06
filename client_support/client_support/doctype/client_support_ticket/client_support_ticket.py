@@ -13,12 +13,11 @@ import time
 class ClientSupportTicket(Document):
 	
 	def autoname(self):
-		frappe.errprint("autoname")
-		
 		project_name = self.project[:3]
 		self.name = make_autoname(project_name + ".####")
 
 	def validate(self):
+		# validation 
 		if not self.project:
 			msgprint("Please select the project")
 
