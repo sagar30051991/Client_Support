@@ -1,9 +1,19 @@
-var status = this.frm.doc.status;
-var closing_date = this.frm.doc.closing_date;
-var isSupport_User = false;
+var status;
+var closing_date;
+var isSupport_User;
+/*
+cur_frm.cscript.refresh = function(){
+	console.log("refresh");
+	cur_frm.cscript.onload();
+}*/
 
 cur_frm.cscript.onload = function(){
 	// Check user role and disable/enable respective fields	
+	
+	status = this.frm.doc.status;
+	closing_date = this.frm.doc.closing_date;
+	isSupport_User = false;
+	
 	isSupport_User = isSupportUser();
 
 	if(isSupport_User){
@@ -38,6 +48,7 @@ cur_frm.cscript.onload = function(){
 }
 
 cur_frm.cscript.status = function(){
+	console.log("status");
 	// if support user and status is set to close then set resolution details field mandatory
 	if(isSupport_User){
 		if(this.frm.doc.status == "Closed" || this.frm.doc.status == "Completed" || this.frm.doc.status == "Not a Issue"){
@@ -73,6 +84,7 @@ cur_frm.cscript.status = function(){
 
 // Trigger on Request Type Field
 cur_frm.cscript.request_type = function(){
+	console.log("request_type");
 	// Perform some action after user changes the request type
 	if (isSupport_User) {
 		console.log("Request Type has been changed to "+this.frm.doc.request_type);
@@ -83,7 +95,6 @@ isSupportUser = function(){
 	// return true if user role Client
 
 	for (var i = 0; i < user_roles.length; i++) {
-		console.log(user_roles[i]);
 		if(user_roles[i] == 'Client')
 			return false;
 		else if(user_roles[i] == 'Support User' || user_roles[i] == 'Support Manager')
