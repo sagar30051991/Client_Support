@@ -13,8 +13,7 @@
    "fieldname": "details", 
    "fieldtype": "Section Break", 
    "label": "Details", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "project", 
@@ -23,7 +22,6 @@
    "label": "Project", 
    "options": "Project Name", 
    "permlevel": 0, 
-   "precision": "", 
    "reqd": 1
   }, 
   {
@@ -32,14 +30,12 @@
    "in_list_view": 1, 
    "label": "Request Type", 
    "options": "Issue\nFeature\nSupport\nTraining\nDocumentation\nUI/Design\nFunctionality Review", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "column_break_3", 
    "fieldtype": "Column Break", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "default": "", 
@@ -48,7 +44,6 @@
    "in_list_view": 1, 
    "label": "Start Date", 
    "permlevel": 0, 
-   "precision": "", 
    "read_only": 1
   }, 
   {
@@ -57,7 +52,6 @@
    "label": "Priority", 
    "options": "Low\nMedium\nHigh", 
    "permlevel": 0, 
-   "precision": "", 
    "set_only_once": 1
   }, 
   {
@@ -66,44 +60,45 @@
    "in_list_view": 1, 
    "label": "Status", 
    "options": "Open\nIn Progress\nNot a Issue\nCompleted\nClosed", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "section_break_8", 
    "fieldtype": "Section Break", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "description", 
    "fieldtype": "Text", 
    "label": "Description", 
    "permlevel": 0, 
-   "precision": "", 
    "reqd": 1
   }, 
   {
    "fieldname": "resolution", 
    "fieldtype": "Section Break", 
    "label": "Resolution Details", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "closing_date", 
    "fieldtype": "Datetime", 
    "label": "Closing Date", 
    "permlevel": 0, 
-   "precision": "", 
    "read_only": 1
+  }, 
+  {
+   "fieldname": "issue", 
+   "fieldtype": "Data", 
+   "hidden": 1, 
+   "label": "issue", 
+   "permlevel": 0
   }, 
   {
    "fieldname": "resolution_details", 
    "fieldtype": "Text", 
    "label": "Resolution Details", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "amended_from", 
@@ -123,7 +118,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-03 14:59:32.379771", 
+ "modified": "2015-04-08 10:55:47.938092", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 
