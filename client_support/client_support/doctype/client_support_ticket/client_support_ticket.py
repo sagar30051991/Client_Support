@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 from frappe.model.naming import make_autoname
-from frappe.utils import now_datetime, now
+from frappe.utils import now_datetime, now, cstr
 from frappe import msgprint
 import datetime
 import time
@@ -13,12 +13,11 @@ import time
 class ClientSupportTicket(Document):
 	
 	def autoname(self):
-		frappe.errprint("autoname")
-		
 		project_name = self.project[:3]
 		self.name = make_autoname(project_name + ".####")
 
 	def validate(self):
+		# validation 
 		if not self.project:
 			msgprint("Please select the project")
 
@@ -37,3 +36,12 @@ class ClientSupportTicket(Document):
 
 		elif self.status == "Close":
 			self.closing_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
+
+	def get_ticket_details(self):
+		ret = {}
+		det = frappe.db.sql("""select status from `tabClient Support Ticket` where name = %s""", self.name)
+		if det:
+			ret = {
+				'status': cstr(det[0][0]),
+			}
+		return ret
