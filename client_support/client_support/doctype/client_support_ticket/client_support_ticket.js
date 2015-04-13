@@ -20,6 +20,7 @@ cur_frm.cscript.onload = function(){
 		this.frm.set_df_property("issue","read_only",1);
 		this.frm.set_df_property("project","read_only",1);
 		this.frm.set_df_property("description","read_only",1);
+		this.frm.set_df_property("subject","read_only",1);
 
 		// If Support user has seen the issue then change the status to In Process
 		/*if(this.frm.doc.status == "Open"){
