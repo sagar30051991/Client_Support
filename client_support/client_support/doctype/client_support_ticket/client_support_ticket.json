@@ -20,7 +20,7 @@
    "fieldtype": "Link", 
    "in_list_view": 1, 
    "label": "Project", 
-   "options": "Project Name", 
+   "options": "Project", 
    "permlevel": 0, 
    "reqd": 1
   }, 
@@ -68,11 +68,22 @@
    "permlevel": 0
   }, 
   {
+   "fieldname": "subject", 
+   "fieldtype": "Text", 
+   "label": "Subject", 
+   "permlevel": 0, 
+   "precision": "", 
+   "reqd": 1, 
+   "set_only_once": 1
+  }, 
+  {
    "fieldname": "description", 
    "fieldtype": "Text", 
    "label": "Description", 
    "permlevel": 0, 
-   "reqd": 1
+   "precision": "", 
+   "reqd": 1, 
+   "set_only_once": 1
   }, 
   {
    "fieldname": "resolution", 
@@ -118,7 +129,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-08 10:55:47.938092", 
+ "modified": "2015-04-14 12:14:31.421250", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 
@@ -131,8 +142,9 @@
    "export": 0, 
    "import": 0, 
    "permlevel": 0, 
+   "print": 0, 
    "read": 1, 
-   "report": 1, 
+   "report": 0, 
    "role": "Client", 
    "write": 1
   }, 
@@ -153,7 +165,7 @@
    "import": 0, 
    "permlevel": 0, 
    "read": 1, 
-   "report": 1, 
+   "report": 0, 
    "role": "Support Manager", 
    "submit": 0, 
    "write": 1
