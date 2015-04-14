@@ -20,7 +20,6 @@
    "label": "Project Name", 
    "no_copy": 0, 
    "permlevel": 0, 
-   "precision": "", 
    "print_hide": 0, 
    "read_only": 0, 
    "report_hide": 0, 
@@ -32,29 +31,25 @@
    "fieldname": "stakeholder", 
    "fieldtype": "Data", 
    "label": "Stakeholder", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "column_break_3", 
    "fieldtype": "Column Break", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "start_date", 
    "fieldtype": "Date", 
    "label": "Start Date", 
    "permlevel": 0, 
-   "precision": "", 
    "reqd": 1
   }, 
   {
    "fieldname": "close_date", 
    "fieldtype": "Date", 
    "label": "Close Date", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }
  ], 
  "hide_heading": 0, 
@@ -64,7 +59,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-03 14:42:28.076475", 
+ "modified": "2015-04-13 05:04:14.687789", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Project Name", 
@@ -114,6 +109,13 @@
    "permlevel": 0, 
    "read": 1, 
    "role": "Support Manager", 
+   "write": 1
+  }, 
+  {
+   "create": 1, 
+   "permlevel": 0, 
+   "read": 1, 
+   "role": "System Manager", 
    "write": 1
   }
  ], 
