@@ -21,7 +21,7 @@
    "fieldtype": "Link", 
    "in_list_view": 1, 
    "label": "Project", 
-   "options": "Project Name", 
+   "options": "Project", 
    "permlevel": 0, 
    "precision": "", 
    "reqd": 1
@@ -133,7 +133,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-13 11:00:59.874191", 
+ "modified": "2015-04-14 12:14:31.421250", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 
