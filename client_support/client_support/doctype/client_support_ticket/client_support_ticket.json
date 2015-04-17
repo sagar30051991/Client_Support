@@ -29,8 +29,9 @@
    "fieldtype": "Select", 
    "in_list_view": 1, 
    "label": "Request Type", 
-   "options": "Issue\nFeature\nSupport\nTraining\nDocumentation\nUI/Design\nFunctionality Review", 
-   "permlevel": 0
+   "options": "Issue\nFeature\nSupport\nTraining\nDocumentation\nUI/Design\nFunctionality Review\nChangeRequest", 
+   "permlevel": 0, 
+   "precision": ""
   }, 
   {
    "fieldname": "column_break_3", 
@@ -59,8 +60,9 @@
    "fieldtype": "Select", 
    "in_list_view": 1, 
    "label": "Status", 
-   "options": "Open\nIn Progress\nNot a Issue\nCompleted\nClosed", 
-   "permlevel": 0
+   "options": "Open\nReopen\nIn Progress\nNot a Issue\nCompleted\nClosed", 
+   "permlevel": 0, 
+   "precision": ""
   }, 
   {
    "fieldname": "section_break_8", 
@@ -129,7 +131,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-17 11:37:27.035139", 
+ "modified": "2015-04-17 12:40:06.445260", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 

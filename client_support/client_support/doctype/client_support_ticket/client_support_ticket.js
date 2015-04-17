@@ -7,13 +7,20 @@ cur_frm.cscript.refresh = function(){
 	cur_frm.cscript.onload();
 }*/
 
-cur_frm.cscript.onload = function(){
+
+cur_frm.cscript.onload = function(doc,dt,dn){
 	// Check user role and disable/enable respective fields	
-	
+	// console.log(doc);
 	status = this.frm.doc.status;
 	closing_date = this.frm.doc.closing_date;
 	isSupport_User = false;
 	
+	if(this.frm.doc.subject)
+	{
+		this.frm.set_df_property("subject","read_only",1);
+	}	
+	
+
 	isSupport_User = isSupportUser();
 
 	if(isSupport_User){
@@ -48,11 +55,19 @@ cur_frm.cscript.onload = function(){
 	}
 }
 
+cur_frm.cscript.subject=function(){
+
+	if(this.frm.doc.subject !="")
+	{
+		this.frm.set_df_property("subject","read_only",1);
+	}
+}
+
 cur_frm.cscript.status = function(){
 	console.log("status");
 	// if support user and status is set to close then set resolution details field mandatory
 	if(isSupport_User){
-		if(this.frm.doc.status == "Closed" || this.frm.doc.status == "Completed" || this.frm.doc.status == "Not a Issue"){
+		if(this.frm.doc.status == "Closed" || this.frm.doc.status == "Completed" || this.frm.doc.status == "Not a Issue" || this.frm.doc.status == "ChangeRequest"){
 			this.frm.doc.closing_date = closing_date
 			
 			this.frm.set_df_property("resolution_details","reqd", 1);
