@@ -59,22 +59,13 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-14 12:52:57.389166", 
+ "modified": "2015-04-14 18:25:22.203630", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Project Name", 
  "name_case": "", 
  "owner": "Administrator", 
  "permissions": [
-  {
-   "create": 1, 
-   "delete": 1, 
-   "permlevel": 0, 
-   "read": 1, 
-   "role": "Administrator", 
-   "submit": 0, 
-   "write": 1
-  }, 
   {
    "create": 1, 
    "permlevel": 0, 
