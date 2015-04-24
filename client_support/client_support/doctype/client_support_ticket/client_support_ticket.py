@@ -17,24 +17,26 @@ class ClientSupportTicket(Document):
 		self.name = make_autoname(project_name + ".####")
 
 	def validate(self):
-		# validation 
+		# validation
 		if not self.project:
 			msgprint("Please select the project")
 
-	def on_update(self):
-		# if status is closed then set closing date
-	
 		if self.status == "Open":
 			# if status is open then set opening date
 			# check if start_date is already set if not then set the value
 
-			odt = frappe.db.get_value("Client Support Ticket","start_date","start_date")
+			odt = frappe.db.get_value("Client Support Ticket",self.name,"start_date")
 			if not odt:
 				self.start_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
 			else:
-				self.start_date = odt 
-
+				self.start_date = odt 	
+			self.closing_date = None
 		elif self.status == "Close":
+			self.closing_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')	
+
+	def on_update(self):
+		# if status is closed then set closing date
+		if self.status == "Close":
 			self.closing_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
 
 	def get_ticket_details(self):
