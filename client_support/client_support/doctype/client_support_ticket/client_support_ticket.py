@@ -23,11 +23,9 @@ class ClientSupportTicket(Document):
 
 	def on_update(self):
 		# if status is closed then set closing date
-	
 		if self.status == "Open":
 			# if status is open then set opening date
 			# check if start_date is already set if not then set the value
-
 			odt = frappe.db.get_value("Client Support Ticket","start_date","start_date")
 			if not odt:
 				self.start_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')

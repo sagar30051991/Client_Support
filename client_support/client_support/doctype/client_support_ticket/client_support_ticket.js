@@ -64,16 +64,13 @@ cur_frm.cscript.subject=function(){
 }
 
 cur_frm.cscript.status = function(){
-	console.log("status");
 	// if support user and status is set to close then set resolution details field mandatory
 	if(isSupport_User){
 		if(this.frm.doc.status == "Closed" || this.frm.doc.status == "Completed" || this.frm.doc.status == "Not a Issue" || this.frm.doc.status == "ChangeRequest"){
-			this.frm.doc.closing_date = closing_date
-			
+			this.frm.doc.closing_date = closing_date			
 			this.frm.set_df_property("resolution_details","reqd", 1);
 			if(this.frm.doc.status == "Closed")
 				this.frm.doc.closing_date = frappe.datetime.now_datetime();
-
 			refresh_field('closing_date');
 		}
 		else if(this.frm.doc.status == "Open" && status != "Open"){
