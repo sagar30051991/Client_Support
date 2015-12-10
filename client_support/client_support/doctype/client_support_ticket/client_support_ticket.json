@@ -30,8 +30,7 @@
    "in_list_view": 1, 
    "label": "Request Type", 
    "options": "Issue\nFeature\nSupport\nTraining\nDocumentation\nUI/Design\nFunctionality Review\nChangeRequest", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "column_break_3", 
@@ -53,7 +52,7 @@
    "label": "Priority", 
    "options": "Low\nMedium\nHigh", 
    "permlevel": 0, 
-   "set_only_once": 1
+   "set_only_once": 0
   }, 
   {
    "fieldname": "status", 
@@ -61,8 +60,7 @@
    "in_list_view": 1, 
    "label": "Status", 
    "options": "Open\nReopen\nIn Progress\nNot a Issue\nCompleted\nClosed", 
-   "permlevel": 0, 
-   "precision": ""
+   "permlevel": 0
   }, 
   {
    "fieldname": "section_break_8", 
@@ -84,7 +82,7 @@
    "label": "Description", 
    "permlevel": 0, 
    "reqd": 1, 
-   "set_only_once": 1
+   "set_only_once": 0
   }, 
   {
    "fieldname": "resolution", 
@@ -131,7 +129,7 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-04-17 12:40:06.445260", 
+ "modified": "2015-12-09 19:28:42.676266", 
  "modified_by": "Administrator", 
  "module": "client_support", 
  "name": "Client Support Ticket", 
