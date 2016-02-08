@@ -7,7 +7,7 @@ frappe.query_reports["Client Support Ticket Report"] = {
 			"fieldname":"project_name",
 			"label": __("Project"),
 			"fieldtype": "Link",
-			"options": "Project Name",
+			"options": "Project",
 			"default": frappe.defaults.get_user_default("project_name")
 		},
 		{
@@ -15,7 +15,7 @@ frappe.query_reports["Client Support Ticket Report"] = {
 			"label": __("Status"),
 			"fieldtype": "Select",
 			"options": ["Open", "In Progress", "Not a Issue", "Completed", "Closed"],
-			"default": frappe.defaults.get_user_default("status")
+			"default": "Open"
 		}
 	]
 }

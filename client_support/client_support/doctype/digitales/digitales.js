@@ -1,0 +1,1 @@
+{% include 'client_support/doctype/wale/wale.js' %};
