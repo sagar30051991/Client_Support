@@ -21,21 +21,21 @@ class ClientSupportTicket(Document):
 		if not self.project:
 			msgprint("Please select the project")
 
-	def on_update(self):
-		# if status is closed then set closing date
+	# def on_update(self):
+	# 	# if status is closed then set closing date
 	
-		if self.status == "Open":
-			# if status is open then set opening date
-			# check if start_date is already set if not then set the value
+	# 	if self.status == "Open":
+	# 		# if status is open then set opening date
+	# 		# check if start_date is already set if not then set the value
 
-			odt = frappe.db.get_value("Client Support Ticket","start_date","start_date")
-			if not odt:
-				self.start_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
-			else:
-				self.start_date = odt 
-
-		elif self.status == "Close":
-			self.closing_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
+	# 		odt = frappe.db.get_value("Client Support Ticket","start_date","start_date")
+	# 		if not odt:
+	# 			self.start_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
+	# 		else:
+	# 			self.start_date = odt 
+# ,"\n<br><b>Resolution:</b>"+self.resolution_details or 
+	# 	elif self.status == "Close":
+	# 		self.closing_date = datetime.datetime.strptime(now(),'%Y-%m-%d %H:%M:%S.%f').strftime('%Y-%m-%d %H:%M:%S')
 
 	def get_ticket_details(self):
 		ret = {}
@@ -45,3 +45,21 @@ class ClientSupportTicket(Document):
 				'status': cstr(det[0][0]),
 			}
 		return ret
+
+	def on_update(self):
+		print "######################################"
+		if (self.status == "Open" or self.status == "Reopen" or self.status == "In Progress" or self.status == "Not a Issue" or self.status == "Completed" or self.status == "Closed" ):
+			print"**********************************"
+			manager_list=frappe.db.sql("select client_user,support_client_user,client_support_manager from tabProject where name= '%s'"%(self.project), as_list=1)
+			if manager_list:
+				print manager_list,"manager_list"
+				for email_id in manager_list:
+					print email_id,"email_id"
+					self.send_mail(email_id)
+
+	def send_mail(self,email_id):
+		print "hiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+		resolution_details = self.resolution_details or ""
+		subj = ("New Support Ticket")
+		messages = ("<b>New Support Ticket</b>:{0}{1}{2}{3}{4}").format(self.name,"<br><b>Status:</b>"+self.status,"<br><b>Subject:</b>"+self.subject,"\n<br><b>Description:</b>"+self.description,"\n<br><b>Resolution:</b>"+resolution_details)
+		frappe.sendmail(email_id,subject=subj,message=messages)

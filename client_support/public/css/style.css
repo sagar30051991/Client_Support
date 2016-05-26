@@ -1,0 +1,105 @@
+.layout-side-section {
+	background-color: #D3C6FE;
+}
+
+
+/*.control-label, .collapse-indicator, .section-head > a {
+	color: #262626 !important;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+}*/
+
+.grid-overflow-ellipsis,
+.collapse-indicator, 
+.section-head > a {
+	color: #990419 !important;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+}
+
+.control-label {
+	color: #325B87 !important;
+	font-size: 12px;
+	letter-spacing: 0.5px;	
+}
+
+div.collapsed < div.section-head  {
+	background-color: #EEE;
+}
+
+input {
+	color: #262626 !important;
+}
+
+input,
+select, 
+textarea,
+.page-head, 
+.frappe-list,
+.timeline-head,
+.grid-heading-row,
+.grid-form-heading,
+.layout-main-section {
+	border: 1px solid #cccccc !important;
+}
+
+.grid-body,
+.timeline-items,
+.visible-section:not(:last-child) {
+	border-bottom: 1px solid #cccccc !important;
+	border-right: 1px solid #cccccc !important;
+	border-left: 1px solid #cccccc !important;
+}
+
+.visible-section:last-child {
+	border-bottom: 1px solid #cccccc !important;
+	border-right: 1px solid #cccccc !important;
+	border-left: 1px solid #cccccc !important;
+}
+
+.list-row-head {
+	border-top: 1px solid #cccccc !important;
+	border-bottom: 1px solid #cccccc !important;
+}
+
+hr,
+.list-row,
+.module-item,
+.form-inner-toolbar {
+	border-bottom: 1px solid #cccccc !important;
+}
+}
+
+#navbar-breadcrumbs > li > a:before {
+	color: #262626 !important;
+}
+
+.btn-default {
+	background-color: #cfdce5;
+}
+
+.btn-default:hover {
+	background-color: #bdcfdb;
+}
+
+.help-box,
+.text-muted,
+.sidebar-menu > li {
+	color: #4e5964 !important;
+}
+
+/*div.form-group > label.control-label,
+div.form-group > div.control-input-wrapper {
+	display: inline-block;
+}
+div.form-group > label.control-label {
+	text-align: right;
+}
+div.form-group > div.control-input-wrapper {
+	padding-left: 10px;
+}*/
+
+.shaded-section {
+	background-color: #ccccff !important;
+}

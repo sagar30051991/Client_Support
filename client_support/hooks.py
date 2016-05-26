@@ -103,4 +103,11 @@ app_version = "0.0.1"
 # override_whitelisted_methods = {
 # 	"frappe.core.doctype.event.event.get_events": "client_support.event.get_events"
 # }
+# doc_events = {
+# 	"Client Support Ticket": {
+# 		"on_update": "client_support.doctype.client_support_ticket.client_support_ticket.notify_client",
 
+# 		# "on_cancel": "method",
+# 		# "on_trash": "method"
+# 	}
+# }
