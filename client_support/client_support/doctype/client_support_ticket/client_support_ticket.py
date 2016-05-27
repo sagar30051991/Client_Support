@@ -47,9 +47,7 @@ class ClientSupportTicket(Document):
 		return ret
 
 	def on_update(self):
-		print "######################################"
 		if (self.status == "Open" or self.status == "Reopen" or self.status == "In Progress" or self.status == "Not a Issue" or self.status == "Completed" or self.status == "Closed" ):
-			print"**********************************"
 			manager_list=frappe.db.sql("select client_user,support_client_user,client_support_manager from tabProject where name= '%s'"%(self.project), as_list=1)
 			if manager_list:
 				print manager_list,"manager_list"
@@ -58,8 +56,8 @@ class ClientSupportTicket(Document):
 					self.send_mail(email_id)
 
 	def send_mail(self,email_id):
-		print "hiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
 		resolution_details = self.resolution_details or ""
 		subj = ("New Support Ticket")
 		messages = ("<b>New Support Ticket</b>:{0}{1}{2}{3}{4}").format(self.name,"<br><b>Status:</b>"+self.status,"<br><b>Subject:</b>"+self.subject,"\n<br><b>Description:</b>"+self.description,"\n<br><b>Resolution:</b>"+resolution_details)
 		frappe.sendmail(email_id,subject=subj,message=messages)
+		

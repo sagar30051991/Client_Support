@@ -26,9 +26,9 @@ cur_frm.cscript.onload = function(doc,dt,dn){
 			    
 				}
 			}	
-			if(this.frm.doc.status == "Open")
+		/*	if(this.frm.doc.status == "Open")
 				this.frm.doc.start_date = frappe.datetime.now_datetime();
-			refresh_field('start_date')
+			refresh_field('start_date')*/
 			if(this.frm.doc.status == "Closed")
 				this.frm.doc.closing_date = frappe.datetime.now_datetime();
 			refresh_field('closing_date')
