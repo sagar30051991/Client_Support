@@ -45,4 +45,5 @@ cur_frm.cscript.custom_refresh = function(doc) {
     // use the __islocal value of doc, to check if the doc is saved or not
     cur_frm.set_df_property("request_type", "read_only", doc.__islocal ? 0 : 1);
     cur_frm.set_df_property("priority", "read_only", doc.__islocal ? 0 : 1);
+    cur_frm.set_df_property("start_date", "read_only", doc.__islocal ? 0 : 1);
 }
