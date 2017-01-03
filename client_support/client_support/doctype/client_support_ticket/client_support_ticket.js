@@ -1,6 +1,7 @@
 cur_frm.cscript.onload = function(doc,dt,dn){
 
 	for (var i = 0; i < user_roles.length; i++) {
+		console.log(user_roles[i])
 		if(user_roles[i]=='Client Support User'){
 			this.frm.set_df_property("issue","read_only",1);
 			this.frm.set_df_property("project","read_only",1);
@@ -26,9 +27,9 @@ cur_frm.cscript.onload = function(doc,dt,dn){
 			    
 				}
 			}	
-		/*	if(this.frm.doc.status == "Open")
+			if(this.frm.doc.status == "Open")
 				this.frm.doc.start_date = frappe.datetime.now_datetime();
-			refresh_field('start_date')*/
+			refresh_field('start_date')
 			if(this.frm.doc.status == "Closed")
 				this.frm.doc.closing_date = frappe.datetime.now_datetime();
 			refresh_field('closing_date')

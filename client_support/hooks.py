@@ -51,9 +51,9 @@ app_version = "0.0.1"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.core.doctype.event.event.get_permission_query_conditions",
-# }
+permission_query_conditions = {
+	"Client Support Ticket": "client_support.client_support.doctype.client_support_ticket.client_support_ticket.get_permission_query_conditions",
+}
 #
 # has_permission = {
 # 	"Event": "frappe.core.doctype.event.event.has_permission",

@@ -60,4 +60,14 @@ class ClientSupportTicket(Document):
 		subj = ("New Support Ticket")
 		messages = ("<b>New Support Ticket</b>:{0}{1}{2}{3}{4}").format(self.name,"<br><b>Status:</b>"+self.status,"<br><b>Subject:</b>"+self.subject,"\n<br><b>Description:</b>"+self.description,"\n<br><b>Resolution:</b>"+resolution_details)
 		frappe.sendmail(email_id,subject=subj,message=messages)
-		
+
+def get_permission_query_conditions(user):
+	if user in ("Administrator", "System Manager"):
+		return ""
+	elif "Client User" in frappe.get_roles() or "Client Support User" in frappe.get_roles() or "Client Support Manager":
+		return ""
+		# print user,"\n\n\n\n\n\n\n\n"		
+		# projects = frappe.db.sql("""select name from `tabProject` where client_user ='{0}'""".format(user)) 
+		# print("hiiiiiiiiiiiiiii",projects)
+		# return frappe.db.sql("select name from `tabClient Support Ticket` where project in '{0}'".format(",".join(["'%s'"%project for project in projects])))
+		# print ("hellllllllllllllllllllllll",format(join(["'%s'" %project for project in projects])))
