@@ -1,7 +1,6 @@
 cur_frm.cscript.onload = function(doc,dt,dn){
 
 	for (var i = 0; i < user_roles.length; i++) {
-		console.log(user_roles[i])
 		if(user_roles[i]=='Client Support User'){
 			this.frm.set_df_property("issue","read_only",1);
 			this.frm.set_df_property("project","read_only",1);
@@ -20,13 +19,13 @@ cur_frm.cscript.onload = function(doc,dt,dn){
 			/*this.frm.set_df_property("project","read_only",1);*/
 			this.frm.set_df_property("resolution_details","read_only",1);
 			refresh_field('resolution_details');
-			cur_frm.cscript.custom_validate = function(doc) {
-			    if (doc.status =="In Progress" || doc.status =="Not a Issue"||doc.status == "Completed" || doc.status == "Closed") {
+			/*cur_frm.cscript.custom_validate = function(doc) {
+			    if (doc.status =="In Progress" || doc.status =="Not a Issue"||doc.status == "Completed") {
 			        msgprint("You can not allow to select this status ");
 			        validated = false;
 			    
 				}
-			}	
+			}*/	
 			if(this.frm.doc.status == "Open")
 				this.frm.doc.start_date = frappe.datetime.now_datetime();
 			refresh_field('start_date')
