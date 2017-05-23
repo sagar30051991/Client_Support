@@ -19,4 +19,5 @@ def get_info_client_support_user(doctype, txt, searchfield, start, page_len, fil
 @frappe.whitelist()
 def get_info_client_support_manager(doctype, txt, searchfield, start, page_len, filters):
 	return frappe.db.sql("""select parent from tabUserRole where role='Client Support Manager'""",as_list=1)
-	
+
+

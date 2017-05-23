@@ -1,3 +1,12 @@
+frappe.ui.form.on("Client Support Ticket","refresh",function(frm){
+ // cur_frm.set_value("project","Rahi Systems")
+ // console.log(user)
+ // if(user == 'Client User')
+ // {
+ // 	frm.set_df_property("project","read_only",1);
+ // }
+})
+
 cur_frm.cscript.onload = function(doc,dt,dn){
 
 	for (var i = 0; i < user_roles.length; i++) {
@@ -16,7 +25,7 @@ cur_frm.cscript.onload = function(doc,dt,dn){
 		}
 		else if(user_roles[i]=='Client User')
 		{
-			/*this.frm.set_df_property("project","read_only",1);*/
+			// this.frm.set_df_property("project","read_only",1);
 			this.frm.set_df_property("resolution_details","read_only",1);
 			refresh_field('resolution_details');
 			/*cur_frm.cscript.custom_validate = function(doc) {
