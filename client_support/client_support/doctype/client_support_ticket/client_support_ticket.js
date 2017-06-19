@@ -9,8 +9,8 @@ frappe.ui.form.on("Client Support Ticket","refresh",function(frm){
 
 cur_frm.cscript.onload = function(doc,dt,dn){
 
-	for (var i = 0; i < user_roles.length; i++) {
-		if(user_roles[i]=='Client Support User'){
+	for (var i = 0; i < roles.length; i++) {
+		if(roles[i]=='Client Support User'){
 			this.frm.set_df_property("issue","read_only",1);
 			this.frm.set_df_property("project","read_only",1);
 			this.frm.set_df_property("description","read_only",1);
@@ -23,7 +23,7 @@ cur_frm.cscript.onload = function(doc,dt,dn){
 				this.frm.doc.closing_date = frappe.datetime.now_datetime();
 			refresh_field('closing_date');
 		}
-		else if(user_roles[i]=='Client User')
+		else if(roles[i]=='Client User')
 		{
 			// this.frm.set_df_property("project","read_only",1);
 			this.frm.set_df_property("resolution_details","read_only",1);
